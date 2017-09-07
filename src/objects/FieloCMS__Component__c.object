@@ -2,80 +2,6 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>FieloCMSPRP_CustomDetailParameter__c</fullName>
-        <externalId>false</externalId>
-        <label>Custom Detail Parameter</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>FieloCMSPRP_HasDetails__c</fullName>
-        <defaultValue>true</defaultValue>
-        <externalId>false</externalId>
-        <label>Has Details</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMSPRP_MainSourceComponent__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Main Source Component</label>
-        <referenceTo>FieloCMS__Component__c</referenceTo>
-        <relationshipLabel>Components (Main Source Component)</relationshipLabel>
-        <relationshipName>FieloCMSPRP_MainComponents</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMSPRP_ProductSourceComponent__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Product Source Component</label>
-        <referenceTo>FieloCMS__Component__c</referenceTo>
-        <relationshipLabel>Components (Product Source Component)</relationshipLabel>
-        <relationshipName>FieloCMSPRP_ProductComponents</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMSPRP_SecondarySourceComponent__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Secondary Source Component</label>
-        <referenceTo>FieloCMS__Component__c</referenceTo>
-        <relationshipLabel>Components (Secondary Source Component)</relationshipLabel>
-        <relationshipName>FieloCMSPRP_SecondaryComponents</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FieloCMSPRP_SubmitMode__c</fullName>
-        <externalId>false</externalId>
-        <label>Submit Mode</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Submit</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Close</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-    </fields>
-    <fields>
         <fullName>FieloCMSPLT_AccountCRMMode__c</fullName>
         <description>Person Account: Create a new Person Account related to the member
 Standard Account: Create a new Standard CRM Account related to the member
@@ -164,5 +90,82 @@ Default Account: The member will be related to an specific default CRM account</
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_CustomDetailParameter__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Detail Parameter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_HasDetails__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Has Details</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_MainSourceComponent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Main Source Component</label>
+        <referenceTo>FieloCMS__Component__c</referenceTo>
+        <relationshipLabel>Components (Main Source Component)</relationshipLabel>
+        <relationshipName>FieloCMSPRP_MainComponents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_ProductSourceComponent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Source Component</label>
+        <referenceTo>FieloCMS__Component__c</referenceTo>
+        <relationshipLabel>Components (Product Source Component)</relationshipLabel>
+        <relationshipName>FieloCMSPRP_ProductComponents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_SecondarySourceComponent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Secondary Source Component</label>
+        <referenceTo>FieloCMS__Component__c</referenceTo>
+        <relationshipLabel>Components (Secondary Source Component)</relationshipLabel>
+        <relationshipName>FieloCMSPRP_SecondaryComponents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FieloCMSPRP_SubmitMode__c</fullName>
+        <externalId>false</externalId>
+        <label>Submit Mode</label>
+        <valueSet>
+            <valueSetDefinition>
+                <value>
+                    <fullName>Submit</fullName>
+                    <default>false</default>
+                    <label>Submit</label>
+                </value>
+                <value>
+                    <fullName>Close</fullName>
+                    <default>false</default>
+                    <label>Close</label>
+                </value>
+                <sorted>false</sorted>
+            </valueSetDefinition>
+        </valueSet>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
 </CustomObject>

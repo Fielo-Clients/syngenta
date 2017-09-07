@@ -54,6 +54,7 @@
 		<members>FieloPLT__RedemptionItem__c.FieloCMSPLT_VoucherLink__c</members>
 		<members>FieloPLT__Reward__c.FieloCMSPLT_Category__c</members>
 		<members>FieloPLT__Reward__c.FieloCMSPLT_InstructionsRichText__c</members>
+		<members>FieloPRP__InvoiceItem__c</members>		
 		<name>CustomField</name>
 	</types>
 	<types>

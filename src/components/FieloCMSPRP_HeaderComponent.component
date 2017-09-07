@@ -1,0 +1,6 @@
+<apex:component >
+	<apex:attribute name="className" type="String" default="cms-prp-section-header" description="component class"/>
+	<div class="{!className}">
+		<apex:componentBody/>
+	</div>
+</apex:component>

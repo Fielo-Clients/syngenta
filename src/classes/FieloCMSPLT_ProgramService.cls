@@ -5,7 +5,7 @@ public class FieloCMSPLT_ProgramService{
 			Id currentMemberId = FieloCMSPLT_MemberService.getCurrentMemberId();
 			//si es guest tomo el pr
 			if(currentMemberId == null){
-				currentProgram = new FieloCMSPLT_ProgramsSelector(false).selectBySiteUrl(Site.getDomain());
+				currentProgram = new FieloCMSPLT_ProgramsSelector(false).selectBySiteUrl(Site.getDomain() + Site.getPathPrefix());
 			}else{
 				Id programId = [SELECT FieloPLT__Program__c FROM FieloPLT__Member__c WHERE Id =: currentMemberId].FieloPLT__Program__c;
 				currentProgram = new FieloCMSPLT_ProgramsSelector(true).selectById(new Set<Id>{programId}).get(0);
@@ -15,7 +15,7 @@ public class FieloCMSPLT_ProgramService{
 	}
 
 	public static FieloPLT__Program__c getProgramByDomain(){
-        return new FieloCMSPLT_ProgramsSelector(false).selectBySiteUrl(Site.getDomain());
-    }
-
+		//	return new FieloCMSPLT_ProgramsSelector(false).selectBySiteId(Site.getSiteId());
+       return new FieloCMSPLT_ProgramsSelector(false).selectBySiteUrl(Site.getDomain() + Site.getPathPrefix());
+   }
 }
